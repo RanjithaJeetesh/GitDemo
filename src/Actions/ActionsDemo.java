@@ -26,6 +26,22 @@ public class ActionsDemo {
 		//remove later
 		a.moveToElement(driver.findElement(By.id("twotabsearchtextbox"))).click().keyDown(Keys.SHIFT).sendKeys("hello").doubleClick().build().perform();
 		a.contextClick(ele).build().perform();
+		System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
+		driver.close();
+		driver.get("https://rahulshettyacademy.com/");
+		System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
+		driver.close();
+		driver.get("https://rahulshettyacademy.com/");
+		System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
+		driver.close();
+		//newly added
+		driver.get("https://rahulshettyacademy.com/");
+		System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
+		driver.close();
 	}
 
 }
