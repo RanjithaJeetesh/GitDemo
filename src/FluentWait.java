@@ -40,6 +40,10 @@ public class FluentWait {
 		       return driver.findElement(By.id("foo"));
 		     }
 		   });*/
+		driver.get("https://rahulshettyacademy.com/");
+		System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
+		driver.close();
 
 	}
 
