@@ -22,6 +22,10 @@ public class ActionsDemo {
 		//a.moveToElement(driver.findElement(By.xpath("//a[@id='nav-link-accountList']"))).build().perform();
 		a.moveToElement(driver.findElement(By.id("twotabsearchtextbox"))).click().keyDown(Keys.SHIFT).sendKeys("hello").doubleClick().build().perform();
 		a.contextClick(ele).build().perform();
+		
+		//remove later
+		a.moveToElement(driver.findElement(By.id("twotabsearchtextbox"))).click().keyDown(Keys.SHIFT).sendKeys("hello").doubleClick().build().perform();
+		a.contextClick(ele).build().perform();
 	}
 
 }
