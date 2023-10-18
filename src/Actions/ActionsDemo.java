@@ -1,5 +1,7 @@
 package Actions;
 
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -42,6 +44,15 @@ public class ActionsDemo {
 		System.out.println(driver.getTitle());
 		System.out.println(driver.getCurrentUrl());
 		driver.close();
+		driver.get("https://rahulshettyacademy.com/angularpractice/");
+		WebElement nameEditBox =driver.findElement(By.cssSelector("[name='name']"));
+		System.out.println(driver.findElement(with(By.tagName("label")).above(nameEditBox)).getText());
+	    WebElement dateOfBirth=	driver.findElement(By.cssSelector("[for='dateofBirth']"));
+	    driver.findElement(with(By.tagName("input")).below(dateOfBirth)).click();
+	    WebElement iceCreamLabel= driver.findElement(By.xpath("//label[text()='Check me out if you Love IceCreams!']"));
+	    driver.findElement(with(By.tagName("input")).toLeftOf(iceCreamLabel)).click();
+	    WebElement radioButton =driver.findElement(By.id("inlineRadio1"));
+	    System.out.println(driver.findElement(with(By.tagName("label")).toRightOf(radioButton)).getText());
 	}
 
 }
